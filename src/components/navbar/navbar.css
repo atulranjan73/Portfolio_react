@@ -1,0 +1,102 @@
+.Navbar {
+    background-color: #161513; /* Dark background for the navbar */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 40px; /* Increased margins */
+    position: -webkit-sticky; /* For Safari */
+    position: sticky; /* Sticky positioning */
+    top: 0; /* Stick to the top */
+    z-index: 1000; /* Ensure it's above other content */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Soft shadow for depth */
+    border-radius: 8px; /* Rounded corners for the navbar */
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 30px; /* Increased gap between menu items */
+    font-size: 18px; /* Increased font size */
+    transition: 0.3s;
+    position: relative; /* Ensure position context for underline images */
+}
+
+.nav-menu li {
+    position: relative; /* To position the underline */
+}
+
+.nav-menu li img {
+    position: absolute;
+    bottom: -14px; /* Adjusts the underline position relative to the text */
+    left: 50%; /* Center the underline */
+    transform: translateX(-50%);
+    width: 60px; /* Width of the underline image */
+    transition: 0.3s ease-in-out;
+    z-index: -1;
+}
+
+/* Ensure the underline only appears for the active menu item */
+.nav-menu li .anchor-link {
+    position: relative;
+    color: #ffffff; /* White color for the menu items */
+    text-decoration: none; /* Remove underline from links */
+    padding: 10px 0; /* Padding for clickable area */
+}
+
+/* Active link styling */
+.nav-menu li.active .anchor-link {
+    color: #f1c40f; /* Highlight color for active link */
+}
+
+/* Highlighted active menu underline */
+.nav-menu li.active img {
+    z-index: 1; /* Bring active underline to the front */
+    bottom: -5px; /* Adjusted position for better alignment */
+    width: 80px; /* Wider underline for active state */
+}
+
+/* Hover effect to scale underline (optional) */
+.nav-menu li:hover img {
+    transform: translateX(-50%) scaleX(1.1);
+}
+
+.nav-connect {
+    padding: 15px 30px; /* Increased padding */
+    border-radius: 30px; /* Larger border-radius */
+    background: linear-gradient(267deg, #DA7c25 0.36%, #B923E1 100%);
+    font-size: 20px; /* Increased font size */
+    cursor: pointer;
+    color: #ffffff; /* Text color for the button */
+    text-align: center; /* Center text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for the button */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+.nav-connect:hover {
+    transform: scale(1.08); /* Slightly larger scale on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* More prominent shadow on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .Navbar {
+        flex-direction: column;
+        margin: 15px 20px; /* Adjusted margin for smaller screens */
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 15px; /* Adjusted gap for smaller screens */
+        font-size: 16px; /* Slightly smaller font size for mobile devices */
+    }
+
+    .nav-connect {
+        padding: 12px 24px; /* Reduced padding for mobile */
+        font-size: 18px; /* Smaller font size for mobile */
+    }
+
+    .nav-menu li img {
+        bottom: -3px; /* Adjust underline position for smaller screens */
+    }
+}

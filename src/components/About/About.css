@@ -1,0 +1,162 @@
+/* Container Styles */
+.about {
+      padding: 0 160px; /* Increased padding for a more spacious layout */
+    width: 100%; /* Full-width container */
+    margin: 100px auto;
+    border-radius: 20px; /* Slightly increased border-radius for a softer look */
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15); /* Increased shadow for better depth */
+    color: #f9f9f9;
+}
+
+/* Header Section */
+.about-header {
+    text-align: center;
+    position: relative;
+    margin-bottom: 50px; /* Adjusted margin for better spacing */
+}
+
+.about-header h1 {
+    font-size: 3rem; /* Increased font size for better emphasis */
+    color: #f9f9f9;
+    margin-bottom: 20px; /* Adjusted margin */
+}
+
+.about-header img {
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transform: translateX(50%);
+    width: 200px; /* Increased size */
+    height: 50px; /* Increased size */
+    z-index: -1;
+}
+
+/* Content Section */
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.about-profile img {
+    width: 350px; /* Increased width */
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2); /* Larger shadow for depth */
+    margin-bottom: 30px; /* Increased margin */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-profile img:hover {
+    transform: scale(1.1); /* More noticeable scale on hover */
+    box-shadow: 0 8px 35px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+}
+
+.about-description {
+    flex: 1;
+    padding-left: 100px; /* Increased padding for better layout */
+    padding-right: 100px; /* Increased padding for better layout */
+    font-size: 1.2rem; /* Increased font size */
+    line-height: 1.8; /* Increased line height for readability */
+    color: #f9f9f9;
+}
+
+.about-description p {
+    margin-bottom: 20px; /* Increased margin for better spacing */
+}
+
+/* Skill Bar Section */
+.about-skills {
+    margin-top: 30px; /* Increased margin */
+}
+
+.skill-bar {
+    margin-bottom: 20px; /* Increased margin */
+}
+
+.skill-bar p {
+    margin-bottom: 10px; /* Increased margin */
+    font-weight: bold;
+    color: #f9f9f9;
+}
+
+.bar {
+    width: 100%;
+    height: 12px; /* Slightly increased height */
+    background-color: #e0e0e0;
+    border-radius: 8px; /* Slightly increased border-radius */
+    overflow: hidden;
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.25); /* Slightly deeper shadow */
+}
+
+.bar-fill {
+    height: 100%;
+    background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 100%);
+    border-radius: 8px; /* Slightly increased border-radius */
+    transition: width 0.4s ease;
+}
+
+/* Stats Section */
+.about-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px; /* Increased margin */
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.stat-box {
+    text-align: center;
+    flex: 1;
+    min-width: 200px; /* Increased minimum width */
+    margin: 30px; /* Increased margin */
+}
+
+.stat-box h1 {
+    font-size: 3rem; /* Increased font size */
+    color: #DA7C25;
+    margin-bottom: 20px; /* Increased margin */
+    font-weight: bold;
+}
+
+.stat-box p {
+    font-size: 1.2rem; /* Increased font size */
+    color: #f9f9f9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-header h1 {
+        font-size: 2.5rem; /* Smaller font size for mobile */
+    }
+
+    .about-profile img {
+        width: 250px; /* Smaller image size for mobile */
+    }
+
+    .about-description {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+    }
+
+    .about-description p {
+        font-size: 1rem; /* Adjusted text size for mobile */
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-stats {
+        flex-direction: column;
+    }
+
+    .stat-box h1 {
+        font-size: 2.5rem; /* Smaller font size for mobile */
+    }
+
+    .stat-box p {
+        font-size: 1rem; /* Adjusted font size for mobile */
+    }
+}
